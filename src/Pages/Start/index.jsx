@@ -4,8 +4,14 @@ import Constants from 'expo-constants';
 
 
 import LifeStatus from '../../Components/Common/LifeStatus';
+import DefualtButton from '../../Components/Common/DefultButton/inde';
 
 export default function Start() {
+
+  const handlerNavigationExplanation  = () =>{
+    console.log('Testando clique')
+  }
+
   return (
     <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false }>
@@ -18,6 +24,13 @@ export default function Start() {
                 <Text style={styles.description}>
                     Vamos transformar sua vida {"\n"} em jogo, buscando sempre {"\n"} o melhor nível.
                 </Text>
+
+                <DefualtButton
+                    buttonText={"Continuar"}
+                    handlePress={handlerNavigationExplanation}
+                    width={250}
+                    height={50}
+                />
             </View>
         </ScrollView>
     </View>
